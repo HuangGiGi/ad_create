@@ -1,0 +1,835 @@
+/*!
+	@fileOverview spaui-viewer样式
+	@author kirkzheng,harikali,dovechen
+	@url http://spaui.oa.com
+*/
+
+.spaui-overflow-hidden {
+    overflow: hidden
+}
+
+.preview-box-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    opacity: .5;
+    z-index: 1500
+}
+
+.preview-box-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #fff;
+    z-index: 2000
+}
+
+.preview-box-content.zoom-content-animation-active {
+    opacity: 1
+}
+
+.previewclose {
+    height: 55px;
+    width: 55px;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    right: 0;
+    border-radius: 0 0 0 55px;
+    background: rgba(0, 0, 0, .3);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, .3);
+    cursor: pointer
+}
+
+.previewclose:after {
+    content: '';
+    height: 19px;
+    width: 19px;
+    background-position: -60px 0;
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    background-image: url(img/module-3.0.0.png)
+}
+
+.previewclose:hover {
+    background-color: rgba(0, 0, 0, .5)
+}
+
+.viewer-action-group,
+.viewer-dragimage {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.viewer-body .viewer-pic.untransition {
+    transition: all 10ms
+}
+
+.viewer-thumbs-pics .small-pic-item .viewer-pdf {
+    line-height: 50px;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.viewer-carousel .viewer-thumbs-pics .small-pic-item .viewer-pdf {
+    color: #000
+}
+
+.viewer-body .viewer-pdf {
+    height: 100%;
+    color: #000;
+    text-align: center;
+    line-height: 100px
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px
+}
+
+.viewer-close-btn .viewer-icon,
+.viewer-icon {
+    vertical-align: middle
+}
+
+.viewer-close-btn,
+.viewer-icon {
+    display: inline-block;
+    position: relative
+}
+
+.viewer-icon {
+    background-repeat: no-repeat;
+    font-size: 0;
+    overflow: hidden;
+    -webkit-text-size-adjust: none
+}
+
+.viewer-icon-mid {
+    width: 40px;
+    height: 40px
+}
+
+.viewer-icon-download,
+.viewer-icon-info,
+.viewer-icon-toggle {
+    width: 24px;
+    height: 24px
+}
+
+.viewer-icon-info {
+    background-image: url(img/viewer-info.svg)
+}
+
+.viewer-icon-close {
+    width: 36px;
+    height: 36px;
+    background-image: url(img/viewer-close.svg)
+}
+
+.viewer-icon-pic {
+    background-image: url(img/viewer-pic.svg)
+}
+
+.viewer-icon-toggle {
+    background-image: url(img/viewer-darr-s.svg)
+}
+
+.viewer-icon-download {
+    background-image: url(img/viewer-download.svg)
+}
+
+.viewer-icon-trig {
+    background-image: url(img/viewer-darrow.svg)
+}
+
+.on .viewer-icon-toggle {
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg)
+}
+
+.viewer-close-btn {
+    text-align: center;
+    cursor: pointer;
+    outline: 0;
+    border: none;
+    background-color: transparent
+}
+
+.viewer-close-btn:hover {
+    text-decoration: none
+}
+
+.viewer-close-btn.disabled,
+.viewer-close-btn.disabled:hover {
+    cursor: not-allowed;
+    background: #72c9ff;
+    color: #fff
+}
+
+.viewer {
+    position: fixed;
+    color: #fff;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 66;
+    min-width: 1000px;
+    animation: fadeIn .1s 0s cubic-bezier(.77, 0, .175, 1);
+    background: rgba(0, 0, 0, .15);
+    opacity: 1;
+    transition: opacity .5s ease;
+    box-sizing: border-box
+}
+
+.viewer * {
+    box-sizing: inherit
+}
+
+.viewer .disabled {
+    cursor: default
+}
+
+.viewer-next,
+.viewer-pre {
+    position: fixed;
+    z-index: 777;
+    top: 50%;
+    width: 64px;
+    height: 80px;
+    margin-top: -40px;
+    border-radius: 2px;
+    cursor: pointer
+}
+
+.viewer-next:hover,
+.viewer-pre:hover {
+    background: rgba(0, 0, 0, .7)
+}
+
+.viewer-next.disabled,
+.viewer-next.disabled:hover,
+.viewer-pre.disabled,
+.viewer-pre.disabled:hover {
+    opacity: .7;
+    background: 0 0
+}
+
+.viewer-pre {
+    left: 25px
+}
+
+.viewer-next {
+    right: 25px
+}
+
+.viewer-icon-pre {
+    width: 64px;
+    height: 80px;
+    background-image: url(img/viewer-pre.svg);
+    transition: background-image .5s ease;
+    -webkit-transition: background-image .5s ease
+}
+
+.viewer-icon-next {
+    width: 64px;
+    height: 80px;
+    background-image: url(img/viewer-next.svg)
+}
+
+.viewer-head {
+    position: relative;
+    height: 60px;
+    line-height: 60px;
+    background: #181818;
+    padding: 0 60px 0 0;
+    z-index: 999
+}
+
+.viewer-head .viewer-action {
+    float: right;
+    margin: 12px 15px 0 0;
+    border: 1px solid #464646;
+    border-radius: 2px
+}
+
+.viewer-head .viewer-action .action-item {
+    position: relative;
+    float: left
+}
+
+.viewer-head .viewer-action .action-item:hover {
+    background: #2f2f2f
+}
+
+.viewer-head .viewer-action .action-item.disabled:hover {
+    background: #fff
+}
+
+.viewer-head .viewer-action .action-item:last-child .viewer-action-btn {
+    border-right: none
+}
+
+.viewer-head .viewer-action .viewer-action-btn {
+    cursor: pointer;
+    height: 34px;
+    line-height: 34px;
+    padding: 0 14px;
+    border-right: 1px solid #d2d8dc
+}
+
+.viewer-head .viewer-action .viewer-action-btn .viewer-icon {
+    margin-right: 2px
+}
+
+.viewer-body {
+    position: absolute;
+    z-index: 667;
+    left: 0;
+    right: 0;
+    top: 60px;
+    bottom: 0
+}
+
+.viewer-body .viewer-pic {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: scale(.7) translate3d(-50%, -50%, 0);
+    transform-origin: 0 0 0;
+    transition: all .1s
+}
+
+.viewer-body .viewer-pic img {
+    display: inline-block;
+    cursor: move;
+    vertical-align: middle;
+    transition: all .1s;
+    transform: rotate(0);
+    transition: all .1s
+}
+
+.viewer-foot {
+    opacity: 1;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 160px;
+    left: 0;
+    bottom: -76px;
+    z-index: 668;
+    pointer-events: none
+}
+
+.viewer-foot.on {
+    bottom: 0
+}
+
+.viewer-foot .viewer-next,
+.viewer-foot .viewer-pre {
+    position: absolute;
+    width: 30px;
+    height: 40px;
+    top: 50%;
+    margin-top: -20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all .3s ease
+}
+
+.viewer-foot .viewer-next:hover,
+.viewer-foot .viewer-pre:hover {
+    background: rgba(255, 255, 255, .1);
+    border-radius: 2px
+}
+
+.viewer-foot .viewer-next.disabled,
+.viewer-foot .viewer-next.disabled:hover,
+.viewer-foot .viewer-pre.disabled,
+.viewer-foot .viewer-pre.disabled:hover {
+    background: 0 0
+}
+
+.viewer-foot .viewer-pre {
+    left: 0
+}
+
+.viewer-foot .viewer-icon-next-s,
+.viewer-foot .viewer-icon-pre-s {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -12px 0 0 -12px;
+    transition: background-image .5s ease
+}
+
+.viewer-foot .viewer-icon-pre-s {
+    background-image: url(img/viewer-pre-s.svg)
+}
+
+.viewer-foot .viewer-icon-next-s {
+    background-image: url(img/viewer-next-s.svg)
+}
+
+.viewer-foot .viewer-next {
+    right: 0
+}
+
+.viewer-titlebar {
+    position: relative;
+    float: left;
+    line-height: 60px;
+    padding: 0 0 0 25px;
+    max-width: 50%
+}
+
+.viewer-title {
+    float: left;
+    position: relative;
+    padding: 0 30px;
+    max-width: 100%
+}
+
+.viewer-title .viewer-icon {
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    margin: -20px 0 0
+}
+
+.viewer-title .viewer-txt {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    display: block
+}
+
+.viewer-close {
+    position: absolute;
+    width: 60px;
+    height: 100%;
+    z-index: 2;
+    cursor: pointer;
+    right: 0
+}
+
+.viewer-close:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 1px;
+    height: 24px;
+    margin: -12px 0 0;
+    background: rgba(255, 255, 255, .2)
+}
+
+.viewer-close .viewer-close-btn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 38px;
+    height: 38px;
+    margin: -19px 0 0 -19px;
+    cursor: pointer
+}
+
+.viewer-close .viewer-close-btn:hover {
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 2px
+}
+
+.viewer-close .viewer-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -18px 0 0 -18px
+}
+
+.viewer-toast {
+    position: absolute;
+    top: 60px;
+    z-index: 1000
+}
+
+.viewer-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #000;
+    z-index: 60;
+    opacity: .85
+}
+
+.viewer-action,
+.viewer-action .viewer-action-btn {
+    border-color: #464646
+}
+
+.viewer-action-group {
+    height: 40px;
+    background: rgba(0, 0, 0, .85);
+    display: inline-block;
+    border-radius: 2px;
+    pointer-events: auto;
+    line-height: 40px;
+    padding: 4px;
+    position: relative;
+    z-index: 669;
+    box-sizing: content-box
+}
+
+.viewer-action-group .viewer-action .viewer-action-btn {
+    float: left;
+    position: relative;
+    padding: 0 10px;
+    cursor: pointer;
+    margin-right: 10px
+}
+
+.viewer-action-group .viewer-action .viewer-action-btn:hover {
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 2px
+}
+
+.viewer-action-group .viewer-action .viewer-action-btn:last-child {
+    margin-right: 0
+}
+
+.viewer-action-group .viewer-action .viewer-action-btn.is-text:before {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 18px;
+    background-color: rgba(255, 255, 255, .2);
+    top: 50%;
+    left: 0;
+    margin: -9px 0 0
+}
+
+.viewer-action-group .viewer-action .viewer-action-btn.is-text:hover:before {
+    opacity: 0
+}
+
+.viewer-action-group .viewer-action .viewer-action-btn.is-text.disabled:hover:before {
+    opacity: 1
+}
+
+.viewer-action-group .viewer-action .viewer-action-btn .viewer-tip {
+    position: absolute;
+    top: -36px;
+    left: 50%;
+    width: 48px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .7);
+    border-radius: 2px;
+    opacity: 0;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+
+.viewer-action-group .viewer-action .viewer-action-btn:hover .viewer-tip {
+    opacity: 1;
+    transition: opacity .5s ease
+}
+
+.viewer-action-group .viewer-action .viewer-action-btn .viewer-icon {
+    width: 24px;
+    height: 24px;
+    transition: background-image .5s ease;
+    cursor: pointer
+}
+
+.viewer-action-group .viewer-action .viewer-action-btn.disabled .text,
+.viewer-action-group .viewer-action .viewer-action-btn.disabled .viewer-icon,
+.viewer-action-group .viewer-action .viewer-action-btn.disabled:hover .text,
+.viewer-action-group .viewer-action .viewer-action-btn.disabled:hover.viewer-icon {
+    opacity: .3;
+    cursor: default
+}
+
+.viewer-action-group .viewer-action .viewer-action-btn.disabled {
+    background: 0 0
+}
+
+.viewer-action-group .viewer-action .viewer-action-btn.disabled .viewer-icon {
+    cursor: default
+}
+
+.viewer-action-group .viewer-action .viewer-icon-zoomin {
+    background-image: url(img/viewer-zoomin.svg)
+}
+
+.viewer-action-group .viewer-action .viewer-icon-zoomout {
+    background-image: url(img/viewer-zoomout.svg)
+}
+
+.viewer-action-group .viewer-action .viewer-icon-rotate {
+    background-image: url(img/viewer-rotate.svg)
+}
+
+.viewer-action-group .viewer-action .is-text .viewer-icon {
+    display: block;
+    width: auto;
+    line-height: 18px;
+    font-size: 14px;
+    color: #fff;
+    font-style: normal
+}
+
+.viewer-bottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 669;
+    background: rgba(0, 0, 0, .85);
+    text-align: center;
+    pointer-events: auto
+}
+
+.viewer-thumbs {
+    position: relative;
+    display: inline-block;
+    height: 50px;
+    padding: 13px 60px;
+    box-sizing: content-box
+}
+
+.viewer-bottom-toggle {
+    position: absolute;
+    width: 48px;
+    height: 15px;
+    top: -15px;
+    left: 50%;
+    margin: 0 0 0 -24px;
+    border-radius: 2px 2px 0 0;
+    background: rgba(0, 0, 0, .7);
+    cursor: pointer
+}
+
+.viewer-bottom-toggle .viewer-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -12px 0 0 -12px;
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg)
+}
+
+.viewer-thumbs-inner {
+    height: 100%;
+    overflow: hidden
+}
+
+.viewer-thumbs-pics {
+    overflow: hidden;
+    height: 100%;
+    white-space: nowrap
+}
+
+.viewer-thumbs-pics .small-pic-item {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 100%;
+    margin-left: 4px;
+    overflow: hidden;
+    cursor: pointer
+}
+
+.viewer-thumbs-pics .small-pic-item:hover .viewer-pic-mask {
+    display: none
+}
+
+.viewer-thumbs-pics .small-pic-item:first-child {
+    margin-left: 0
+}
+
+.viewer-thumbs-pics .small-pic-item.current:after,
+.viewer-thumbs-pics .small-pic-item.current:hover:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border: 2px solid #389cff;
+    z-index: 1
+}
+
+.viewer-thumbs-pics .small-pic-item .viewer-pic {
+    width: 50px;
+    height: 100%;
+    background-size: cover
+}
+
+.viewer-thumbs-pics .small-pic-item .viewer-pic-mask {
+    position: absolute;
+    width: 50px;
+    height: 100%;
+    background: #000;
+    opacity: .4;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    transition: all .3s ease
+}
+
+.viewer-thumbs-pics .is-selected {
+    color: #389cff
+}
+
+.viewer-thumbs-pics .is-selected::before {
+    content: '';
+    background: currentColor;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    opacity: .5
+}
+
+.viewer-thumbs-pics .is-selected::after {
+    content: '';
+    height: 8px;
+    width: 14px;
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    position: absolute;
+    bottom: 8px;
+    right: 5px;
+    z-index: 2
+}
+
+.viewer-thumbs-pics .current .viewer-pic-mask {
+    opacity: 0
+}
+
+.viewer.disabled {
+    cursor: default
+}
+
+.viewer.hide .viewer-next,
+.viewer.hide .viewer-pre {
+    opacity: 0;
+    transition: opacity .5s ease, transform .5s ease
+}
+
+.viewer.hide .viewer-pre {
+    -ms-transform: translateX(-50px);
+    transform: translateX(-50px)
+}
+
+.viewer.hide .viewer-next {
+    -ms-transform: translateX(50px);
+    transform: translateX(50px)
+}
+
+.viewer.hide .viewer-foot {
+    opacity: 0
+}
+
+.on .viewer-bottom-toggle .viewer-icon {
+    -ms-transform: rotate(0);
+    transform: rotate(0)
+}
+
+.media-viewer .viewer-inner {
+    height: 100%
+}
+
+.viewer-carousel {
+    position: absolute;
+    height: 100%;
+    min-width: 0;
+    overflow: hidden;
+    background: 0 0
+}
+
+.viewer-carousel .viewer-overlay {
+    display: none
+}
+
+.viewer-carousel .viewer-head {
+    display: none
+}
+
+.viewer-carousel .viewer-body {
+    top: 0;
+    bottom: 76px
+}
+
+.viewer-carousel .viewer-bottom-toggle {
+    display: none
+}
+
+.viewer-carousel .viewer-foot {
+    height: 126px
+}
+
+.viewer-carousel .viewer-bottom {
+    background: 0 0
+}
+
+.viewer-carousel .viewer-next,
+.viewer-carousel .viewer-pre {
+    position: absolute;
+    filter: invert(.5)
+}
+
+.viewer-action-btn:hover,
+.viewer-foot,
+.viewer-next,
+.viewer-pre {
+    transition: all .3s ease
+}
+
+@media (max-width:1024px) {
+    .viewer-action-btn {
+        padding: 0 7px
+    }
+    .viewer-pre {
+        left: 15px
+    }
+    .viewer-next {
+        right: 15px
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}

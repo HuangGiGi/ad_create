@@ -1,0 +1,386 @@
+/*!
+	@fileOverview spaui-tabs样式
+	@author kirkzheng,harikali,dovechen
+	@url http://spaui.oa.com
+*/
+
+@-webkit-keyframes spinner {
+    100% {
+        -webkit-transform: rotate(720deg);
+        transform: rotate(720deg)
+    }
+}
+
+@keyframes spinner {
+    100% {
+        -webkit-transform: rotate(720deg);
+        transform: rotate(720deg)
+    }
+}
+
+.spaui-tabs-nav:after,
+.spaui-tabs-nav:before {
+    content: " ";
+    display: table
+}
+
+.spaui-tabs-nav:after {
+    clear: both
+}
+
+.spaui-tabs-nav {
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none
+}
+
+.spaui-tabs-nav>li {
+    position: relative;
+    display: block
+}
+
+.spaui-tabs-nav>li>a {
+    position: relative;
+    display: block
+}
+
+.spaui-tabs-nav>li>a:focus,
+.spaui-tabs-nav>li>a:hover {
+    text-decoration: none
+}
+
+.spaui-tabs-nav>li.disabled>a {
+    color: rgba(0, 0, 0, .3)
+}
+
+.spaui-tabs-nav>li.disabled>a:focus,
+.spaui-tabs-nav>li.disabled>a:hover {
+    color: rgba(0, 0, 0, .3);
+    text-decoration: none;
+    background-color: transparent;
+    cursor: not-allowed
+}
+
+.spaui-tabs-nav .open>a,
+.spaui-tabs-nav .open>a:focus,
+.spaui-tabs-nav .open>a:hover {
+    background-color: #f5f6f8;
+    border-color: #1b90ee
+}
+
+.spaui-tabs-nav .nav-divider {
+    height: 1px;
+    margin: 9px 0;
+    overflow: hidden;
+    background-color: #e5e5e5
+}
+
+.spaui-tabs-nav>li>a>img {
+    max-width: none
+}
+
+.spaui-tabs-indicator {
+    position: absolute;
+    height: 3px;
+    height: var(--spaui-tabs-indicator-border-width);
+    bottom: 0;
+    left: 0;
+    background: #2096f5;
+    background: var(--spaui-tabs-indicator-border-color);
+    font-size: 0;
+    line-height: 0;
+    width: 12px;
+    width: var(--spaui-tabs-indicator-width);
+    -webkit-transition: .3s ease;
+    transition: .3s ease
+}
+
+.spaui-tabs-nav,
+.spaui-tabs-nav.with-indicator,
+.spaui-tabs-stacked.with-indicator {
+    position: relative;
+    border-bottom: none
+}
+
+.spaui-tabs-nav.with-indicator>li,
+.spaui-tabs-nav>li,
+.spaui-tabs-stacked.with-indicator>li {
+    float: left
+}
+
+.spaui-tabs-nav.with-indicator>li>a,
+.spaui-tabs-nav>li>a,
+.spaui-tabs-stacked.with-indicator>li>a {
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border: none;
+    border-radius: 0;
+    outline: 0;
+    outline: 0
+}
+
+.spaui-tabs-nav.with-indicator>li.active>a,
+.spaui-tabs-nav.with-indicator>li.active>a:focus,
+.spaui-tabs-nav.with-indicator>li.active>a:hover,
+.spaui-tabs-nav>li.active>a,
+.spaui-tabs-nav>li.active>a:focus,
+.spaui-tabs-nav>li.active>a:hover,
+.spaui-tabs-stacked.with-indicator>li.active>a,
+.spaui-tabs-stacked.with-indicator>li.active>a:focus,
+.spaui-tabs-stacked.with-indicator>li.active>a:hover {
+    cursor: default
+}
+
+.spaui-tabs-nav.with-indicator>li.disabled,
+.spaui-tabs-nav>li.disabled,
+.spaui-tabs-stacked.with-indicator>li.disabled {
+    cursor: not-allowed
+}
+
+.spaui-tabs-nav.with-indicator>li.disabled>a,
+.spaui-tabs-nav>li.disabled>a,
+.spaui-tabs-stacked.with-indicator>li.disabled>a {
+    pointer-events: none
+}
+
+.spaui-tabs-nav.with-indicator>li.spaui-tabs-indicator,
+.spaui-tabs-nav>li.spaui-tabs-indicator,
+.spaui-tabs-stacked.with-indicator>li.spaui-tabs-indicator {
+    position: absolute
+}
+
+.spaui-tabs-nav {
+    border-bottom: 1px solid #dcdee3;
+    border-bottom: var(--spaui-tabs-border-bottom)
+}
+
+.spaui-tabs-nav>li {
+    margin-left: 30px
+}
+
+.spaui-tabs-nav>li>a {
+    padding: 10px 0
+}
+
+.spaui-tabs-nav.with-indicator {
+    border-bottom: none
+}
+
+.spaui-tabs-nav.with-indicator>li {
+    margin-left: 0
+}
+
+.spaui-tabs-nav.with-indicator>li>a {
+    padding: 10px 15px
+}
+
+.spaui-tabs-nav.with-indicator>li.active::after,
+.spaui-tabs-nav.with-indicator>li::after {
+    display: none
+}
+
+.spaui-tabs-nav>li {
+    margin-bottom: -1px
+}
+
+.spaui-tabs-nav>li::after {
+    display: block;
+    position: absolute;
+    content: '';
+    height: 3px;
+    height: var(--spaui-tabs-indicator-border-width);
+    left: 0;
+    right: 2px;
+    bottom: 0;
+    background: #2096f5;
+    background: var(--spaui-tabs-indicator-border-color);
+    line-height: 0;
+    -webkit-transform: scale3d(0, 1, 1);
+    transform: scale3d(0, 1, 1);
+    -webkit-transition: -webkit-transform .4s;
+    transition: -webkit-transform .4s;
+    transition: transform .4s;
+    transition: transform .4s, -webkit-transform .4s
+}
+
+.spaui-tabs-nav>li.active::after {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1)
+}
+
+.spaui-tabs-stacked {
+    position: relative;
+    border-bottom: none
+}
+
+.spaui-tabs-stacked>li {
+    float: none;
+    position: relative
+}
+
+.spaui-tabs-stacked>li::after {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 3px;
+    width: var(--spaui-tabs-indicator-border-width);
+    left: auto;
+    bottom: 2px;
+    right: 0;
+    top: 0;
+    background: #2096f5;
+    background: var(--spaui-tabs-indicator-border-color);
+    line-height: 0;
+    -webkit-transform: scale3d(1, 0, 1);
+    transform: scale3d(1, 0, 1);
+    -webkit-transition: -webkit-transform .4s;
+    transition: -webkit-transform .4s;
+    transition: transform .4s;
+    transition: transform .4s, -webkit-transform .4s
+}
+
+.spaui-tabs-stacked>li.active::after {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1)
+}
+
+.spaui-tabs-stacked>li.disabled>a {
+    color: rgba(0, 0, 0, .3)
+}
+
+.spaui-tabs-stacked>li.disabled>a:focus,
+.spaui-tabs-stacked>li.disabled>a:hover {
+    color: rgba(0, 0, 0, .3);
+    text-decoration: none;
+    background-color: transparent;
+    cursor: not-allowed
+}
+
+.spaui-tabs-stacked>li+li {
+    margin-top: 2px;
+    margin-left: 0
+}
+
+.spaui-tabs-stacked.with-indicator>li {
+    position: static
+}
+
+.spaui-tabs-stacked.with-indicator>li.active::after {
+    display: none
+}
+
+.spaui-tabs-stacked.with-indicator>li.spaui-tabs-indicator {
+    position: absolute;
+    width: 3px;
+    width: var(--spaui-tabs-indicator-border-width);
+    left: auto;
+    bottom: auto;
+    right: 0;
+    top: 0;
+    background: #2096f5;
+    background: var(--spaui-tabs-indicator-border-color);
+    font-size: 0;
+    line-height: 0;
+    height: 12px;
+    height: var(--spaui-tabs-indicator-width)
+}
+
+.spaui-tabs-stacked.with-indicator {
+    position: relative
+}
+
+.spaui-tabs-stacked.with-indicator>li {
+    float: none
+}
+
+.spaui-tabs-stacked.with-indicator>li>a {
+    margin-right: 0
+}
+
+.spaui-overflow-hidden,
+.spaui-viewer-overflow-hidden {
+    overflow: hidden
+}
+
+.spaui-tabs-head .spaui-tabs:after,
+.spaui-tabs-head .spaui-tabs:before {
+    content: " ";
+    display: table
+}
+
+.spaui-tabs-head .spaui-tabs:after {
+    clear: both
+}
+
+.spaui-tabs-head .spaui-tabs {
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none
+}
+
+.spaui-tabs-head .spaui-tabs>li {
+    position: relative;
+    display: block
+}
+
+.spaui-tabs-head .spaui-tabs>li>a {
+    position: relative;
+    display: block
+}
+
+.spaui-tabs-head .spaui-tabs>li>a:focus,
+.spaui-tabs-head .spaui-tabs>li>a:hover {
+    text-decoration: none
+}
+
+.spaui-tabs-head .spaui-tabs>li.disabled>a {
+    color: rgba(0, 0, 0, .3)
+}
+
+.spaui-tabs-head .spaui-tabs>li.disabled>a:focus,
+.spaui-tabs-head .spaui-tabs>li.disabled>a:hover {
+    color: rgba(0, 0, 0, .3);
+    text-decoration: none;
+    background-color: transparent;
+    cursor: not-allowed
+}
+
+.spaui-tabs-head .spaui-tabs .open>a,
+.spaui-tabs-head .spaui-tabs .open>a:focus,
+.spaui-tabs-head .spaui-tabs .open>a:hover {
+    background-color: #f5f6f8;
+    border-color: #1b90ee
+}
+
+.spaui-tabs-head .spaui-tabs .nav-divider {
+    height: 1px;
+    margin: 9px 0;
+    overflow: hidden;
+    background-color: #e5e5e5
+}
+
+.spaui-tabs-head .spaui-tabs>li>a>img {
+    max-width: none
+}
+
+.spaui-tabs-head .spaui-tabs {
+    border-bottom: 1px solid #dcdee3;
+    border-bottom: var(--spaui-tabs-border-bottom)
+}
+
+.spaui-tabs-head .spaui-tabs>li {
+    margin-left: 0
+}
+
+.spaui-tabs-head .spaui-tabs>li>a {
+    padding: 10px 0
+}
+
+.spaui-tabs-head .spaui-tabs>li {
+    margin-bottom: -1px;
+    float: left
+}
+
+.spaui-tabs-head .spaui-tabs.slider>li.active>a {
+    color: #1ba3f4
+}

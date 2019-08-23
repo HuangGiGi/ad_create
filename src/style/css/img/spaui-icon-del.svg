@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>清除</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="日期选择" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-275.000000, -337.000000)">
+        <g id="Group-5" transform="translate(62.000000, 327.000000)">
+            <g id="下拉框">
+                <g id="清除" transform="translate(213.000000, 10.000000)">
+                    <circle id="Oval" fill="#AAAFBA" fill-rule="evenodd" cx="8" cy="8" r="8"></circle>
+                    <path d="M5.33333333,5.33333333 L10.6666667,10.6666667" id="Line" stroke="#FFFFFF" stroke-width="1" stroke-linecap="square"></path>
+                    <path d="M5.33333333,5.33333333 L10.6666667,10.6666667" id="Line" stroke="#FFFFFF" stroke-width="1" stroke-linecap="square" transform="translate(8.000000, 8.000000) scale(-1, 1) translate(-8.000000, -8.000000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

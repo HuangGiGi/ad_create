@@ -1,0 +1,229 @@
+@charset "utf-8";
+.c-title {
+    color: #404246
+}
+
+.c-text {
+    color: #555
+}
+
+.c-text-week {
+    color: #888
+}
+
+.c-text-disabled {
+    color: #abacad
+}
+
+.c-tx-important {
+    color: #ed3b3b
+}
+
+.fs-base {
+    font-size: 16px
+}
+
+.fs-large {
+    font-size: 20px
+}
+
+.fs-small {
+    font-size: 12px
+}
+
+.fs-middle {
+    font-size: 14px
+}
+
+.ad-process.modal-project-guide .modal-content {
+    width: 800px;
+    border-radius: 10px
+}
+
+.ad-process.modal-project-guide .modal-content .modal-header {
+    text-align: center;
+    height: 76px
+}
+
+.ad-process.modal-project-guide .modal-content .modal-header button.close:hover {
+    border-top-right-radius: 10px
+}
+
+.ad-process.modal-project-guide .modal-content .modal-header h4 {
+    font-size: 20px
+}
+
+.ad-process.modal-project-guide .modal-content .modal-header h4 span {
+    color: #e88e00
+}
+
+.ad-process.modal-project-guide .modal-content .modal-body {
+    padding: 0
+}
+
+.ad-process.modal-project-guide .guide-area {
+    width: 800px;
+    height: 417px;
+    background: url(img/guide-bg.png);
+    position: relative;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px
+}
+
+.ad-process.modal-project-guide .guide-area .spa-ui .carousel {
+    background-color: transparent
+}
+
+.ad-process.modal-project-guide .guide-area .spa-ui .carousel-inner .item {
+    width: 100%
+}
+
+.ad-process.modal-project-guide .guide-area .spa-ui .carousel-inner .item a {
+    width: 650px;
+    height: 300px;
+    margin: 45px 75px
+}
+
+.ad-process.modal-project-guide .guide-area .spa-ui .carousel-indicators li {
+    background-color: #b9b9b9
+}
+
+.ad-process.modal-project-guide .guide-area .spa-ui .carousel-indicators li.active {
+    background-color: #e88e00
+}
+
+.ad-process.modal-project-guide .guide-area .spa-ui .carousel-indicators {
+    bottom: -44px
+}
+
+.ad-process.modal-project-guide .guide-area .spa-ui .carousel-control {
+    height: 40px;
+    width: 18px;
+    padding: 5px;
+    background: 0 0
+}
+
+.ad-process.modal-project-guide .guide-area .spa-ui .carousel-control.left {
+    margin-left: 15px
+}
+
+.ad-process.modal-project-guide .guide-area .spa-ui .carousel-control.right {
+    margin-right: 15px
+}
+
+.ad-process.modal-project-guide .guide-area .spa-ui .carousel-control:hover {
+    background-color: rgba(255, 255, 255, .1)
+}
+
+.ad-process.modal-project-guide .guide-area .spa-ui .carousel-control .chevron-left {
+    margin: 0;
+    height: 30px;
+    width: 8px;
+    background-position: 0 0;
+}
+
+.ad-process.modal-project-guide .guide-area .spa-ui .carousel-control .chevron-right {
+    margin: 0;
+    height: 30px;
+    width: 8px;
+    background-position: -10px 0;
+}
+
+.ad-process.modal-project-guide .guide-area .step-a {
+    background: url(img/guide-a.png)
+}
+
+.ad-process.modal-project-guide .guide-area .step-b {
+    background: url(img/guide-b.png)
+}
+
+.ad-process.modal-project-guide .guide-area .step-c {
+    background: url(img/guide-c.png)
+}
+
+.ad-process.modal-project-guide .guide-area .step-d {
+    background: url(img/guide-d.png)
+}
+
+.ad-process.modal-project-guide .guide-area .detail {
+    position: absolute;
+    bottom: 13px;
+    right: 20px;
+    color: #888;
+    font-size: 12px
+}
+
+@media only screen and (min--moz-device-pixel-ratio:1.5),
+only screen and (-webkit-min-device-pixel-ratio:1.5),
+only screen and (-webkit-min-device-pixel-ratio:2.5),
+only screen and (min-resolution:240dpi),
+only screen and (-webkit-min-device-pixel-ratio:2),
+only screen and (min-resolution:2dppx) {
+    .ad-process.modal-project-guide .guide-area .step-a {
+        background: url(img/guide-a@2x.png)
+    }
+    .ad-process.modal-project-guide .guide-area .step-b {
+        background: url(img/guide-b@2x.png)
+    }
+    .ad-process.modal-project-guide .guide-area .step-c {
+        background: url(img/guide-c@2x.png)
+    }
+    .ad-process.modal-project-guide .guide-area .step-d {
+        background: url(img/guide-d@2x.png)
+    }
+}
+
+@media only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-resolution: 240dpi),
+only screen and (min-resolution: 2dppx) {
+    .ad-process.modal-project-guide .guide-area .step-a {
+        background-size: 650px 300px;
+        background-image: url(img/guide-a@2x.png)
+    }
+    .ad-process.modal-project-guide .guide-area .step-b {
+        background-size: 650px 300px;
+        background-image: url(img/guide-b@2x.png)
+    }
+    .ad-process.modal-project-guide .guide-area .step-c {
+        background-size: 650px 300px;
+        background-image: url(img/guide-c@2x.png)
+    }
+    .ad-process.modal-project-guide .guide-area .step-d {
+        background-size: 650px 300px;
+        background-image: url(img/guide-d@2x.png)
+    }
+}
+
+/* img/modal-project-guide-20180305_21425.png */
+
+.ad-process.modal-project-guide .guide-area .spa-ui .carousel-control .chevron-left,
+.ad-process.modal-project-guide .guide-area .spa-ui .carousel-control .chevron-right {
+    background-image: url(img/modal-project-guide-20180305_21425.png);
+}
+
+
+/* img/modal-project-guide-20180305_21425@2x.png */
+
+@media only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-resolution: 240dpi),
+only screen and (min-resolution: 2dppx) {
+    .ad-process.modal-project-guide .guide-area .spa-ui .carousel-control .chevron-left,
+    .ad-process.modal-project-guide .guide-area .spa-ui .carousel-control .chevron-right {
+        background-image: url(img/modal-project-guide-20180305_21425@2x.png);
+        background-size: 17px auto;
+    }
+    .ad-process.modal-project-guide .guide-area .spa-ui .carousel-control .chevron-left {
+        background-position: 0 0;
+    }
+    .ad-process.modal-project-guide .guide-area .spa-ui .carousel-control .chevron-right {
+        background-position: -9px 0;
+    }
+}
+
+.css_stamp {
+    content: "20180314125100";
+}
